@@ -3,6 +3,7 @@
 *~
 
 .crystal
+.shards
 libs
 
 shard.lock

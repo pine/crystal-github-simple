@@ -3,8 +3,8 @@ module GitHub::Simple::API
     def initialize(@client, @owner, @repo)
     end
 
-    def commits
-      @client.get("/repos/#{@owner}/#{@repo}/commits")
+    def commits(params = {} of String => String)
+      @client.get("/repos/#{@owner}/#{@repo}/commits", params)
     end
 
     def commit(sha)
