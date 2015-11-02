@@ -7,7 +7,7 @@ describe GitHub::Simple::Client do
   it :get do
     WebMock.wrap do
       WebMock.stub(:get, "api.github.com/repos/pine613/crenv/commits")
-      res = client.get("repos/pine613/crenv/commits")
+      res = client.get("repos/pine613/crenv/commits").first
 
       res.status_code.should eq(200)
       res.body.should eq("")
@@ -15,7 +15,7 @@ describe GitHub::Simple::Client do
   end
 
   it :repos do
-    client.repos("owner", "repo").should be_a(GitHub::Simple::API::Repo)
+    client.repos("owner", "repo").should be_a(GitHub::Simple::Resource::Repo)
   end
 
 end

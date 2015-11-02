@@ -1,6 +1,11 @@
 name: github_simple
 version: 0.1.0
 
+dependencies:
+  rfc5988:
+    github: pine613/crystal-rfc5988
+    version: 0.1.0
+
 development_dependencies:
   webmock:
     github: manastech/webmock.cr
