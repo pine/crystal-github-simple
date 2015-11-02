@@ -14,7 +14,7 @@ module GitHub::Simple::Response
     })
   end
 
-	class SingleCommit
+  class SingleCommit
     JSON.mapping({
       url: String,
       sha: String,
@@ -26,5 +26,5 @@ module GitHub::Simple::Response
       parents: Array(Model::Commit::Parent),
       stats: Model::Commit::Stats,
     })
-	end
+  end
 end
