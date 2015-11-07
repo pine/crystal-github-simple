@@ -17,5 +17,4 @@ describe GitHub::Simple::Client do
   it :repos do
     client.repos("owner", "repo").should be_a(GitHub::Simple::Resource::Repo)
   end
-
 end

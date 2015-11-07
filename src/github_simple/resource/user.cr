@@ -7,14 +7,14 @@ module GitHub::Simple::Resource
 
     def events(public = false, org = nil)
       path = if public
-              "/users/#{@username}/events/public"
+               "/users/#{@username}/events/public"
              elsif org
-              "/users/#{@username}/events/orgs/#{org}"
+               "/users/#{@username}/events/orgs/#{org}"
              else
-              "/users/#{@username}/events"
+               "/users/#{@username}/events"
              end
 
-      @client.get(path).map {|response|
+      @client.get(path).map { |response|
         Array(Response::Event).from_json(response.body)
       }.flatten
     end

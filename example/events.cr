@@ -5,7 +5,7 @@ include GitHub::Simple
 
 client = Client.new
 client.auto_paginate = false
-client.access_token  = ENV["GITHUB_API_TOKEN"]
+client.access_token = ENV["GITHUB_API_TOKEN"]
 
 username = Readline.readline("username: ")
 

@@ -95,7 +95,7 @@ module GitHub::Simple
 }
       >
       client = MockClient.new(response)
-      repo   = Resource::Repo.new(client, "owner", "repo")
+      repo = Resource::Repo.new(client, "owner", "repo")
       commit = repo.commit("sha")
 
       commit.should be_a(Response::SingleCommit)
