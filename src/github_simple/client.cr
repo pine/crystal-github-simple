@@ -18,6 +18,7 @@ module GitHub::Simple
     )
       @headers = HTTP::Headers { "Accept": "application/vnd.github.v3+json" }
       @repos   = {} of {String,String} => Resource::Repo
+      @users   = {} of String => Resource::User
     end
 
     def access_token
@@ -54,6 +55,10 @@ module GitHub::Simple
 
     def repos(owner, repo)
       @repos[{owner, repo}] ||= Resource::Repo.new(self, owner, repo)
+    end
+
+    def users(username)
+      @users[username] ||= Resource::User.new(self, username)
     end
 
     private def build_query(params)

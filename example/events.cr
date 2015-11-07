@@ -7,9 +7,8 @@ client = Client.new
 client.auto_paginate = false
 client.access_token  = ENV["GITHUB_API_TOKEN"]
 
-owner = Readline.readline("owner: ")
-repo  = Readline.readline("repo : ")
+username = Readline.readline("username: ")
 
-if owner && repo
-  p client.repos(owner, repo).commits
+if username
+  p client.users(username).events(public: true)
 end
