@@ -1,5 +1,5 @@
 require "./spec_helper"
-require "../src/github/simple/version"
+require "../src/github_simple/version"
 
 describe GitHub::Simple do
   it :VERSION do

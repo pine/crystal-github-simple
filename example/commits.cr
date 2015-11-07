@@ -1,5 +1,5 @@
 require "readline"
-require "../src/github/simple"
+require "../src/github_simple"
 
 include GitHub::Simple
 

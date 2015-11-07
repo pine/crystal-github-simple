@@ -1,6 +1,6 @@
 require "../../spec_helper"
-require "../../../src/github/simple/client"
-require "../../../src/github/simple/resource/repo"
+require "../../../src/github_simple/client"
+require "../../../src/github_simple/resource/repo"
 
 module GitHub::Simple
   describe Resource::Repo do

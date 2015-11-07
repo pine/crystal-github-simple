@@ -1,5 +1,5 @@
 require "./spec_helper"
-require "../src/github/simple/client"
+require "../src/github_simple/client"
 
 describe GitHub::Simple::Client do
   client = GitHub::Simple::Client.new
@@ -7,7 +7,7 @@ describe GitHub::Simple::Client do
   it :get do
     WebMock.wrap do
       WebMock.stub(:get, "api.github.com/repos/pine613/crenv/commits")
-      res = client.get("repos/pine613/crenv/commits").first
+      res = client.get("/repos/pine613/crenv/commits").first
 
       res.status_code.should eq(200)
       res.body.should eq("")
