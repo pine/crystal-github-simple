@@ -13,6 +13,23 @@ dependencies:
     branch: master
 ```
 
+## Usage
+
+See example `example/commits.cr`.
+
+```crystal
+require "github_simple"
+
+include GitHub::Simple
+
+client = Client.new
+client.auto_paginate = true
+client.access_token  = "GITHUB_ACCESS_TOKEN"
+
+p client.repos("owner", "repo").commits
+p client.repos("owner", "repo").commit("sha")
+```
+
 
 ## Contributing
 
