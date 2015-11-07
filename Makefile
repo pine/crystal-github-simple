@@ -1,9 +1,14 @@
-.PHONY: all install test
+.PHONY: default all
+default: all
+all: install build test
 
-all: install test
-
+.PHONY: install test
 install:
 	crystal deps
+
+build:
+	mkdir -p bin
+	crystal build --release example/commits.cr -o bin/commits
 
 test:
 	crystal spec

@@ -8,8 +8,8 @@ module GitHub::Simple::Response
       html_url: String,
       comments_url: String,
       commit: Model::Commit::Commit,
-      author: Model::Author::Author,
-      committer: Model::Author::Author,
+      author: { type: Model::Author::Author, nilable: true },
+      committer: { type: Model::Author::Author, nilable: true },
       parents: Array(Model::Commit::Parent),
     })
   end
@@ -21,8 +21,8 @@ module GitHub::Simple::Response
       html_url: String,
       comments_url: String,
       commit: Model::Commit::Commit,
-      author: Model::Author::Author,
-      committer: Model::Author::Author,
+      author: { type: Model::Author::Author, nilable: true },
+      committer: { type: Model::Author::Author, nilable: true },
       parents: Array(Model::Commit::Parent),
       stats: Model::Commit::Stats,
     })
