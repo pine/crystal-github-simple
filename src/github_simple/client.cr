@@ -39,7 +39,7 @@ module GitHub::Simple
     def get(path, params = {} of String => String)
       query = build_query(params)
       url = "#{@endpoint}#{path}"
-      url = "#{url}#{query}" unless params.empty?
+      url = "#{url}?#{query}" unless params.empty?
 
       responses = [HTTP::Client.get(url, @headers)]
 
