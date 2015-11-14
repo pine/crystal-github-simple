@@ -12,12 +12,14 @@ module GitHub::Simple
     property :auto_paginate
 
     def initialize(
-                   @access_token = nil,
+                   access_token = nil,
                    @endpoint = "https://api.github.com",
                    @auto_paginate = false)
       @headers = HTTP::Headers{"Accept": "application/vnd.github.v3+json"}
       @repos = {} of {String, String} => Resource::Repo
       @users = {} of String           => Resource::User
+
+      self.access_token = access_token
     end
 
     def access_token
