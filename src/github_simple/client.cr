@@ -51,7 +51,7 @@ module GitHub::Simple
         responses.push(HTTP::Client.get(next_url, @headers))
       end
 
-      responses
+      responses.select {|response| response.status_code == 200 }
     end
 
     def repos(owner, repo)
