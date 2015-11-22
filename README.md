@@ -1,4 +1,4 @@
-# crystal-github-simple [![Build Status](https://travis-ci.org/pine613/crystal-github-simple.svg)](https://travis-ci.org/pine613/crystal-github-simple)
+# crystal-github-simple [![Build Status](https://travis-ci.org/pine613/crystal-github-simple.svg)](https://travis-ci.org/pine613/crystal-github-simple) [![docrystal.org](http://docrystal.org/badge.svg?style=round)](http://docrystal.org/github.com/pine613/crystal-github-simple)
 
 A [Crystal](http://crystal-lang.org/) wrapper for the [GitHub](https://github.com/) API.
 
